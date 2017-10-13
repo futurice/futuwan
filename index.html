@@ -7,49 +7,7 @@
     <meta name="author" content="Tammerforce">
     <meta name="description" content="futuWAN 2017">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/tachyons.css">
-    <style>
-      /* Flexible twitch viewer (stupid iframes grumble grumble) */
-      .twitch-container, .twitch-embed {
-        position: relative;
-        overflow: hidden;
-      }
-      .twitch-block {
-        height: 30em;
-      }
-      .twitch-embed {
-        padding-bottom: 56.25%;
-        max-width: 100%;
-        height: auto;
-        max-height: 23em;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-      }
-      .twitch-embed iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
-
-      /* Bg animating gradient */
-      body {
-        background: linear-gradient(to right, #d902c9 0%,#ff9001 19%,#bbb500 40%,#42af46 60%,#0067fc 83%,#d902c9 100%); 
-        background-size: 10000px 100%;
-        animation: bg 120s linear infinite;
-      }
-      @keyframes bg {
-        0% {
-          background-position-x: 0;
-        }
-        100% {
-          background-position-x: 10000px;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="/css/tachyons.min.css">
   </head>
 
   <body class="bg-dark-gray near-white sans-serif">
@@ -59,22 +17,24 @@
         <img class="mb4 mt4 w5 center db" src="/img/futuwan-logo.svg" />
       </header>
 
-      <section class="tc">
+      <section class="mb4 tc">
         <a class="near-white" href="https://futurice.com/">Futurice</a> multi-site online gaming 13-15. Oct 2017
       </section>
 
-      <main class="mb4 twitch-container">
-        <div class="twitch-block">
-          <section class="twitch-embed">
-            <iframe src="https://player.twitch.tv/?channel=futurice" frameborder="0" allowfullscreen="true" scrolling="no"></iframe>
-          </section>
-        </div>
+      <main class="mb4 aspect-ratio">
+        <div class="aspect-ratio--16x9"></div>
+        <section class="aspect-ratio--object">
+          <iframe src="https://player.twitch.tv/?channel=futurice"
+            frameborder="0" allowfullscreen="true" scrolling="no" width="1280" height="1280"></iframe>
+        </section>
       </main>
 
-      <section class="mb4">
+      <h2>Counter-Strike: Global Offensive Bracket</h2>
+      <section class="challonge mb4">
         <iframe src="https://challonge.com/t07t739r/module?theme=5596" width="100%" height="500" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
       </section>
-
+      
+      <h2>Counter-Strike: Global Offensive Schedule</h2>
       <section class="mb4">
         <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRYNaDnUbFNewSiEWwwitgNHTW0ddYccxPI0UwsDbtuajx_anbij7HGEpkH0XevhkbWX4qpDrjMMcF2/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" width="100%" height="400" frameborder="0"></iframe>
       </section>
